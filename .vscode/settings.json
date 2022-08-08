@@ -1,11 +1,13 @@
 {
     "files.eol": "\n",
+    // "eslint.quiet": true, // ignore warnings Report errors only - default: false
+    "eslint.run": "onSave", // - run the linter onSave or onType, default is onType.
     "[javascript]": {
         // "editor.defaultFormatter": "esbenp.prettier-vscode",
         // "editor.formatOnSave": false,
         "editor.codeActionsOnSave": {
             "source.fixAll.eslint": true
-        }
+        },
     },
     "makefile.extensionOutputFolder": "./.vscode"
 }
