@@ -12,4 +12,8 @@ make install
 
 ## brain-even
 
-<a href="https://asciinema.org/a/6dEmwvb9FwY6xbQZbtaj2Exvw" target="_blank"><img src="https://asciinema.org/a/6dEmwvb9FwY6xbQZbtaj2Exvw.svg" /></a>
+<a href="https://asciinema.org/a/513365" target="_blank"><img src="https://asciinema.org/a/513365.svg" /></a>
+
+## brain-calc
+
+<a href="https://asciinema.org/a/513594" target="_blank"><img src="https://asciinema.org/a/513594.svg" /></a>
