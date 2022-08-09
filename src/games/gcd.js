@@ -1,4 +1,4 @@
-import { randomInteger, gcd } from '../math.js';
+import { randomInteger, greatestCommonDivisor as gcd } from '../math.js';
 
 export const gameDescription = 'Find the greatest common divisor of given numbers.';
 
