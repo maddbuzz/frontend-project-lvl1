@@ -21,3 +21,7 @@ make install
 ## brain-gcd
 
 <a href="https://asciinema.org/a/513606" target="_blank"><img src="https://asciinema.org/a/513606.svg" /></a>
+
+## brain-progression
+
+<a href="https://asciinema.org/a/513643" target="_blank"><img src="https://asciinema.org/a/513643.svg" /></a>
