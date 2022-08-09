@@ -17,3 +17,7 @@ make install
 ## brain-calc
 
 <a href="https://asciinema.org/a/513594" target="_blank"><img src="https://asciinema.org/a/513594.svg" /></a>
+
+## brain-gcd
+
+<a href="https://asciinema.org/a/513606" target="_blank"><img src="https://asciinema.org/a/513606.svg" /></a>

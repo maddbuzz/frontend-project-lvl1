@@ -1,4 +1,4 @@
-import randomInteger from '../math.js';
+import { randomInteger } from '../math.js';
 
 export const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 

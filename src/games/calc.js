@@ -1,4 +1,4 @@
-import randomInteger from '../math.js';
+import { randomInteger } from '../math.js';
 
 export const gameDescription = 'What is the result of the expression?';
 
