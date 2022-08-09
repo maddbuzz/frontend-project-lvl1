@@ -25,3 +25,7 @@ make install
 ## brain-progression
 
 <a href="https://asciinema.org/a/513643" target="_blank"><img src="https://asciinema.org/a/513643.svg" /></a>
+
+## brain-prime
+
+<a href="https://asciinema.org/a/513650" target="_blank"><img src="https://asciinema.org/a/513650.svg" /></a>
