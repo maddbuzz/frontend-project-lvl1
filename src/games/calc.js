@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import { getRandomInteger } from '../math.js';
+import getRandomInteger from '../math.js';
 
 const gameDescription = 'What is the result of the expression?';
 
