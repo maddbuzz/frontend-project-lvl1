@@ -16,11 +16,12 @@ const getGCD = (number1, number2) => {
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const getGameQuestionAndAnswer = () => {
-  const number1 = 1 + getRandomInteger(100);
-  const number2 = 1 + getRandomInteger(100);
+  const [minimumNumber, maximumNumber] = [1, 101];
+  const number1 = minimumNumber + getRandomInteger(maximumNumber - minimumNumber);
+  const number2 = minimumNumber + getRandomInteger(maximumNumber - minimumNumber);
+
   const question = `${number1} ${number2}`;
-  const answer = String(getGCD(number1, number2));
-  return [question, answer];
+  return [question, String(getGCD(number1, number2))];
 };
 
 export default () => runGame(gameDescription, getGameQuestionAndAnswer);
