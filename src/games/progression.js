@@ -4,18 +4,21 @@ import getRandomInteger from '../math.js';
 const gameDescription = 'What number is missing in the progression?';
 
 const getGameQuestionAndAnswer = () => {
-  const progressionInitialTerm = getRandomInteger(20);
-  const progressionTermsCount = 5 + getRandomInteger(6);
-  const progressionDifference = 1 + getRandomInteger(10);
-  const hiddenTermNumber = getRandomInteger(progressionTermsCount);
+  const initialTermMaximum = 20;
+  const initialTerm = getRandomInteger(initialTermMaximum);
+  const [termsCountMinimum, termsCountMaximum] = [5, 11];
+  const termsCount = termsCountMinimum + getRandomInteger(termsCountMaximum - termsCountMinimum);
+  const [termsDifferenceMinimum, termsDifferenceMaximum] = [1, 11];
+  const termsDifference = termsDifferenceMinimum
+   + getRandomInteger(termsDifferenceMaximum - termsDifferenceMinimum);
+  const hiddenTermNumber = getRandomInteger(termsCount);
   const terms = [];
-  for (let i = 0; i < progressionTermsCount; i += 1) {
-    terms.push(progressionInitialTerm + i * progressionDifference);
+  for (let i = 0; i < termsCount; i += 1) {
+    terms.push(initialTerm + i * termsDifference);
   }
   const answer = String(terms[hiddenTermNumber]);
   terms[hiddenTermNumber] = '..';
-  const question = terms.join(' ');
-  return [question, answer];
+  return [terms.join(' '), answer];
 };
 
 export default () => runGame(gameDescription, getGameQuestionAndAnswer);
