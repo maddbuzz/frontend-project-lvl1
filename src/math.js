@@ -1,4 +1,4 @@
-export const randomInteger = (maximumExclusive) => Math.trunc(Math.random() * maximumExclusive);
+export const getRandomInteger = (maximumExclusive) => Math.trunc(Math.random() * maximumExclusive);
 
 /* https://en.wikipedia.org/wiki/Euclidean_algorithm */
 export const greatestCommonDivisor = (nonZeroInteger1, nonZeroInteger2) => {
