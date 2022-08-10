@@ -4,15 +4,20 @@ import getRandomInteger from '../math.js';
 const gameDescription = 'What is the result of the expression?';
 
 const getGameQuestionAndAnswer = () => {
-  const number1 = getRandomInteger(10);
-  const number2 = getRandomInteger(10);
+  const numbersMaximum = 10;
+  const number1 = getRandomInteger(numbersMaximum);
+  const number2 = getRandomInteger(numbersMaximum);
   const operators = ['+', '-', '*'];
   const operator = operators[getRandomInteger(operators.length)];
   const question = `${number1} ${operator} ${number2}`;
-  const answer = String(
-    Function(`return ${question}`)() // eslint-disable-line
-  );
-  return [question, answer];
+  let result;
+  switch (operator) {
+    case '+': result = number1 + number2; break;
+    case '-': result = number1 - number2; break;
+    case '*': result = number1 * number2; break;
+    default:
+  }
+  return [question, String(result)];
 };
 
 export default () => runGame(gameDescription, getGameQuestionAndAnswer);
