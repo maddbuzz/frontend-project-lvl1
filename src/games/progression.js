@@ -1,8 +1,9 @@
+import runGame from '../index.js';
 import { randomInteger } from '../math.js';
 
-export const gameDescription = 'What number is missing in the progression?';
+const gameDescription = 'What number is missing in the progression?';
 
-export const getGameQuestionAndAnswer = () => {
+const getGameQuestionAndAnswer = () => {
   const progressionInitialTerm = randomInteger(20);
   const progressionTermsCount = 5 + randomInteger(6);
   const progressionDifference = 1 + randomInteger(10);
@@ -16,3 +17,5 @@ export const getGameQuestionAndAnswer = () => {
   const question = terms.join(' ');
   return [question, answer];
 };
+
+export default () => runGame(gameDescription, getGameQuestionAndAnswer);

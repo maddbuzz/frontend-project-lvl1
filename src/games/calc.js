@@ -1,8 +1,9 @@
+import runGame from '../index.js';
 import { randomInteger } from '../math.js';
 
-export const gameDescription = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 
-export const getGameQuestionAndAnswer = () => {
+const getGameQuestionAndAnswer = () => {
   const number1 = randomInteger(10);
   const number2 = randomInteger(10);
   const operators = ['+', '-', '*'];
@@ -13,3 +14,5 @@ export const getGameQuestionAndAnswer = () => {
   );
   return [question, answer];
 };
+
+export default () => runGame(gameDescription, getGameQuestionAndAnswer);
