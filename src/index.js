@@ -7,8 +7,8 @@ const runGame = (gameDescription, getGameQuestionAndAnswer) => {
 
   console.log(gameDescription);
 
-  let correctAnswersCount = 0;
-  while (correctAnswersCount < 3) {
+  const roundsToWin = 3;
+  for (let r = 0; r < roundsToWin; r += 1) {
     const [question, correctAnswer] = getGameQuestionAndAnswer();
 
     console.log(`Question: ${question}`);
@@ -23,7 +23,6 @@ const runGame = (gameDescription, getGameQuestionAndAnswer) => {
     }
 
     console.log('Correct!');
-    correctAnswersCount += 1;
   }
 
   console.log(`Congratulations, ${userName}!`);
