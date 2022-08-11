@@ -1,25 +1,28 @@
 import runGame from '../index.js';
-import getRandomInteger from '../math.js';
+import { getRandomIntegerInRange } from '../math.js';
 
 const gameDescription = 'What is the result of the expression?';
 
-const getGameQuestionAndAnswer = () => {
-  const numbersMaximum = 10;
-  const number1 = getRandomInteger(numbersMaximum);
-  const number2 = getRandomInteger(numbersMaximum);
+const [minimumNumber, maximumNumber] = [0, 10];
 
-  const operators = ['+', '-', '*'];
-  const operator = operators[getRandomInteger(operators.length)];
-
-  const question = `${number1} ${operator} ${number2}`;
-  let result;
+const operators = ['+', '-', '*'];
+const calculate = (operand1, operator, operand2) => {
   switch (operator) {
-    case '+': result = number1 + number2; break;
-    case '-': result = number1 - number2; break;
-    case '*': result = number1 * number2; break;
-    default:
+    case '+': return operand1 + operand2;
+    case '-': return operand1 - operand2;
+    case '*': return operand1 * operand2;
+    default: throw new Error(`Unexpected operator '${operator}'!`);
   }
-  return [question, String(result)];
+};
+
+const getGameQuestionAndAnswer = () => {
+  const number1 = getRandomIntegerInRange(minimumNumber, maximumNumber);
+  const number2 = getRandomIntegerInRange(minimumNumber, maximumNumber);
+  const operator = operators[getRandomIntegerInRange(0, operators.length)];
+  return [
+    `${number1} ${operator} ${number2}`,
+    String(calculate(number1, operator, number2)),
+  ];
 };
 
 export default () => runGame(gameDescription, getGameQuestionAndAnswer);

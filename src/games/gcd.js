@@ -1,5 +1,9 @@
 import runGame from '../index.js';
-import getRandomInteger from '../math.js';
+import { getRandomIntegerInRange } from '../math.js';
+
+const gameDescription = 'Find the greatest common divisor of given numbers.';
+
+const [minimumNumber, maximumNumber] = [1, 101];
 
 const getGCD = (number1, number2) => {
 /* https://en.wikipedia.org/wiki/Euclidean_algorithm */
@@ -13,15 +17,13 @@ const getGCD = (number1, number2) => {
   return number2 > number1 ? gcd(number2, number1) : gcd(number1, number2);
 };
 
-const gameDescription = 'Find the greatest common divisor of given numbers.';
-
 const getGameQuestionAndAnswer = () => {
-  const [minimumNumber, maximumNumber] = [1, 101];
-  const number1 = minimumNumber + getRandomInteger(maximumNumber - minimumNumber);
-  const number2 = minimumNumber + getRandomInteger(maximumNumber - minimumNumber);
-
-  const question = `${number1} ${number2}`;
-  return [question, String(getGCD(number1, number2))];
+  const number1 = getRandomIntegerInRange(minimumNumber, maximumNumber);
+  const number2 = getRandomIntegerInRange(minimumNumber, maximumNumber);
+  return [
+    `${number1} ${number2}`,
+    String(getGCD(number1, number2)),
+  ];
 };
 
 export default () => runGame(gameDescription, getGameQuestionAndAnswer);
