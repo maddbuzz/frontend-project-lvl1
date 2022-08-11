@@ -1,3 +1,9 @@
-const getRandomInteger = (maximumExclusive) => Math.trunc(Math.random() * maximumExclusive);
+export const getRandomNumberInRange = (minimumInclusive, maximumExclusive) => (
+  minimumInclusive + Math.random() * (maximumExclusive - minimumInclusive)
+);
 
-export default getRandomInteger;
+export const getRandomIntegerInRange = (minimumInclusive, maximumExclusive) => (
+  Math.trunc(
+    getRandomNumberInRange(minimumInclusive, maximumExclusive),
+  )
+);
