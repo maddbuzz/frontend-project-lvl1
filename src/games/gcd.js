@@ -7,15 +7,12 @@ const minimumNumber = 1;
 const maximumNumber = 101;
 
 const getGCD = (number1, number2) => {
-/* https://en.wikipedia.org/wiki/Euclidean_algorithm */
   const gcd = (n1, n2) => {
     const remainder = n1 % n2;
-    if (remainder === 0) return n2;
-    return gcd(n2, remainder);
+    return remainder === 0 ? n2 : gcd(n2, remainder);
   };
-
   if (number1 === 0 || number2 === 0) return null;
-  return number2 > number1 ? gcd(number2, number1) : gcd(number1, number2);
+  return gcd(number1, number2);
 };
 
 const getGameQuestionAndAnswer = () => {
