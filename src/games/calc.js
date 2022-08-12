@@ -3,7 +3,8 @@ import { getRandomIntegerInRange } from '../math.js';
 
 const gameDescription = 'What is the result of the expression?';
 
-const [minimumNumber, maximumNumber] = [0, 10];
+const minimumNumber = 0;
+const maximumNumber = 10;
 
 const operators = ['+', '-', '*'];
 const calculate = (operand1, operator, operand2) => {

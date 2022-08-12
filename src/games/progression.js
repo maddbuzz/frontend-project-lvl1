@@ -3,9 +3,12 @@ import { getRandomIntegerInRange } from '../math.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const [initialTermMinimum, initialTermMaximum] = [0, 20];
-const [termsCountMinimum, termsCountMaximum] = [5, 11];
-const [termsDifferenceMinimum, termsDifferenceMaximum] = [1, 11];
+const initialTermMinimum = 0;
+const initialTermMaximum = 20;
+const termsCountMinimum = 5;
+const termsCountMaximum = 11;
+const termsDifferenceMinimum = 1;
+const termsDifferenceMaximum = 11;
 
 const getTerms = (initialTerm, termsCount, termsDifference) => {
   const terms = [];

@@ -3,7 +3,8 @@ import { getRandomIntegerInRange } from '../math.js';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const [minimumNumber, maximumNumber] = [2, 30];
+const minimumNumber = 2;
+const maximumNumber = 30;
 
 const isPrime = (number) => {
   if (number < 2) return null;

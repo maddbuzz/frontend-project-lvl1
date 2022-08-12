@@ -3,7 +3,8 @@ import { getRandomIntegerInRange } from '../math.js';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const [minimumNumber, maximumNumber] = [0, 100];
+const minimumNumber = 0;
+const maximumNumber = 100;
 
 const isEven = (number) => number % 2 === 0;
 

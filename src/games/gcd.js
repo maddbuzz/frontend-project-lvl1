@@ -3,7 +3,8 @@ import { getRandomIntegerInRange } from '../math.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-const [minimumNumber, maximumNumber] = [1, 101];
+const minimumNumber = 1;
+const maximumNumber = 101;
 
 const getGCD = (number1, number2) => {
 /* https://en.wikipedia.org/wiki/Euclidean_algorithm */
